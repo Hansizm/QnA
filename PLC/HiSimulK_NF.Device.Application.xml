@@ -1,0 +1,2938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.11.0</Version>
+    <SymbolConfigObject version="3.5.13.20" runtimeid="3.5.13.30" libversion="3.5.13.0" compiler="3.5.13.30" lmm="3.5.13.0" profile="CODESYS V3.5 SP13 Patch 3+" settings="SupportOPCUA, XmlIncludeComments, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="HiSimulK_NF" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeArray name="T_ARRAY__1__34__OF_WORD" size="68" nativesize="68" typeclass="Array" iecname="ARRAY [1..34] OF WORD" basetype="T_WORD">
+      <ArrayDim minrange="1" maxrange="34" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__5__OF_WORD" size="10" nativesize="10" typeclass="Array" iecname="ARRAY [1..5] OF WORD" basetype="T_WORD">
+      <ArrayDim minrange="1" maxrange="5" />
+    </TypeArray>
+    <TypeUserDef name="T_RS" size="3" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="RS">
+      <UserDefElement iecname="SET" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RESET1" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q1" type="T_BOOL" byteoffset="2" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SR" size="3" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="SR">
+      <UserDefElement iecname="SET1" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RESET" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q1" type="T_BOOL" byteoffset="2" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TOF" size="16" nativesize="28" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TOF">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="16" nativesize="28" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_PSD" size="53" nativesize="116" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="PSD">
+      <UserDefElement iecname="IN_01" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_02" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_03" type="T_BOOL" byteoffset="2" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_04" type="T_BOOL" byteoffset="3" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_05" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_06" type="T_BOOL" byteoffset="5" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_07" type="T_BOOL" byteoffset="6" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_08" type="T_BOOL" byteoffset="7" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_09" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" />
+      <UserDefElement iecname="IN_10" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RESET" type="T_BOOL" byteoffset="10" vartype="VAR_INPUT" />
+      <UserDefElement iecname="OUT_01" type="T_BOOL" byteoffset="11" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_02" type="T_BOOL" byteoffset="12" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_03" type="T_BOOL" byteoffset="13" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_04" type="T_BOOL" byteoffset="14" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_05" type="T_BOOL" byteoffset="15" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_06" type="T_BOOL" byteoffset="16" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_07" type="T_BOOL" byteoffset="17" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_08" type="T_BOOL" byteoffset="18" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_09" type="T_BOOL" byteoffset="19" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OUT_10" type="T_BOOL" byteoffset="20" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="TRIP" type="T_BOOL" byteoffset="21" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="SR_0" type="T_SR" byteoffset="22" vartype="VAR" />
+      <UserDefElement iecname="SR_1" type="T_SR" byteoffset="25" vartype="VAR" />
+      <UserDefElement iecname="SR_2" type="T_SR" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="SR_3" type="T_SR" byteoffset="31" vartype="VAR" />
+      <UserDefElement iecname="SR_4" type="T_SR" byteoffset="34" vartype="VAR" />
+      <UserDefElement iecname="SR_5" type="T_SR" byteoffset="37" vartype="VAR" />
+      <UserDefElement iecname="SR_6" type="T_SR" byteoffset="40" vartype="VAR" />
+      <UserDefElement iecname="SR_7" type="T_SR" byteoffset="43" vartype="VAR" />
+      <UserDefElement iecname="SR_8" type="T_SR" byteoffset="46" vartype="VAR" />
+      <UserDefElement iecname="SR_9" type="T_SR" byteoffset="49" vartype="VAR" />
+      <UserDefElement iecname="RESET_ASSIGN" type="T_BOOL" byteoffset="52" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SEQ" size="52" nativesize="100" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="SEQ">
+      <UserDefElement iecname="ENABLE" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" />
+      <UserDefElement iecname="START" type="T_BOOL" byteoffset="1" vartype="VAR_INPUT" />
+      <UserDefElement iecname="FEEDBACK" type="T_BOOL" byteoffset="2" vartype="VAR_INPUT" />
+      <UserDefElement iecname="DELAY" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="SKIP" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RESET" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" />
+      <UserDefElement iecname="COMMAND" type="T_BOOL" byteoffset="10" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="TIMEOUT" type="T_BOOL" byteoffset="11" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="COMPLETE" type="T_BOOL" byteoffset="12" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="RS_0" type="T_RS" byteoffset="13" vartype="VAR" />
+      <UserDefElement iecname="RS_1" type="T_RS" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="TON_0" type="T_TON" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="TOF_0" type="T_TOF" byteoffset="36" vartype="VAR" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL_Alarm_Device">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="B117A_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117A_STF" type="T_BOOL" access="ReadWrite">
+          <Comment>//////////////////////////////////// Tags that registered as an Alarm ///////////////////////////////////////</Comment>
+          <Comment>BLOWER</Comment>
+        </Node>
+        <Node name="B117B_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA35_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA35_OPF" type="T_BOOL" access="ReadWrite">
+          <Comment>//////////////////////////////////// END : Tags that registered as an Alarm ///////////////////////////////////////</Comment>
+          <Comment> BALLAST VALVES</Comment>
+        </Node>
+        <Node name="BA36_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA36_OPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_OPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_OPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1131_CF" type="T_BOOL" access="ReadWrite">
+          <Comment> FCV-1131 CONTROL FAIL</Comment>
+        </Node>
+        <Node name="FCV1211_CF" type="T_BOOL" access="ReadWrite">
+          <Comment> FCV-1211 CONTROL FAIL</Comment>
+        </Node>
+        <Node name="FCV2131_CF" type="T_BOOL" access="ReadWrite">
+          <Comment> FCV-2131 CONTROL FAIL</Comment>
+        </Node>
+        <Node name="FCV2211_CF" type="T_BOOL" access="ReadWrite">
+          <Comment> FCV-2211 CONTROL FAIL</Comment>
+        </Node>
+        <Node name="GSP01_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP01_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_STF" type="T_BOOL" access="ReadWrite">
+          <Comment>N.U UNIT</Comment>
+        </Node>
+        <Node name="P171A_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171A_STF" type="T_BOOL" access="ReadWrite">
+          <Comment>Sea Water Feeding Unit</Comment>
+        </Node>
+        <Node name="P171B_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142A_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142A_STF" type="T_BOOL" access="ReadWrite">
+          <Comment>RECTIFIER</Comment>
+        </Node>
+        <Node name="RF142B_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142B_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142C_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142C_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP01_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP01_STF" type="T_BOOL" access="ReadWrite">
+          <Comment>W.B PUMP</Comment>
+        </Node>
+        <Node name="WBP02_SPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP02_STF" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_OPF" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_CLF" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_OPF" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Alarm_Interlock">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="AIT_1121_HH" type="T_BOOL" access="ReadWrite">
+          <Comment>H2 Gas Detector</Comment>
+        </Node>
+        <Node name="AIT_1121_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_1122_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_1122_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_1123_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_1123_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_151_BYPASS" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO (* 2023.06.01, JSY - Change from event to alarm*) </Comment>
+        </Node>
+        <Node name="AIT_151_E" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_151_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_151_L" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO</Comment>
+        </Node>
+        <Node name="AIT_151_PF" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO (* 2023.06.01, JSY - Power source supply statue Purge Controller to the TRO sensor*) </Comment>
+        </Node>
+        <Node name="AIT_251_BYPASS" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO (* 2023.06.01, JSY - Change from event to alarm*)</Comment>
+        </Node>
+        <Node name="AIT_251_E" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_251_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_251_L" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO</Comment>
+        </Node>
+        <Node name="AIT_251_PF" type="T_BOOL" access="ReadWrite">
+          <Comment> FOR HiQ-TRO (* 2023.06.01, JSY - Power source supply statue Purge Controller to the TRO sensor*)</Comment>
+        </Node>
+        <Node name="AP_LVL_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="AP_LVL_LO" type="T_BOOL" access="ReadWrite">
+          <Comment>APT Level Too Level</Comment>
+        </Node>
+        <Node name="B_117A_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117A_OFF" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117B_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117B_OFF" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAL_VV_AL_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAL_VV_AL_S" type="T_BOOL" access="ReadWrite">
+          <Comment> LINE-UP FAIL ALARM</Comment>
+        </Node>
+        <Node name="BLR_BOTH_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_HH_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_HH_S" type="T_BOOL" access="ReadWrite">
+          <Comment>TRO Sensor</Comment>
+        </Node>
+        <Node name="BTRO_HI_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_HI_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_LL_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_LL_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_LO_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BTRO_LO_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="CT_1111_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="CT_1111_LO" type="T_BOOL" access="ReadWrite">
+          <Comment>//////////////////////////////////// Tags that registered as an Alarm ///////////////////////////////////////</Comment>
+          <Comment>Feeding Sea Water salinity</Comment>
+        </Node>
+        <Node name="DEBAL_VV_AL_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="DEBAL_VV_AL_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="DPS_1321" type="T_BOOL" access="ReadWrite" />
+        <Node name="DPS_2321" type="T_BOOL" access="ReadWrite" />
+        <Node name="DTRO_HH_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="DTRO_HH_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="DTRO_HI_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="DTRO_HI_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="ER_FAN_OFF" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_1131_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_1131_LO" type="T_BOOL" access="ReadWrite">
+          <Comment>Injection Flow rate</Comment>
+        </Node>
+        <Node name="FIT_1211_HH" type="T_BOOL" access="ReadWrite">
+          <Comment>Main Flow rate</Comment>
+        </Node>
+        <Node name="FIT_1211_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_1211_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_2131_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_2131_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_2211_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_2211_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT_2211_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="GAS_LEAK_AL" type="T_BOOL" access="ReadWrite">
+          <Comment> GAS DETECT FROM PUMP ROOM OR TK</Comment>
+        </Node>
+        <Node name="GSP_01_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_01_FAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_02_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_02_FAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="LIT_1311_HI" type="T_BOOL" access="ReadWrite">
+          <Comment>N.A UNIT</Comment>
+        </Node>
+        <Node name="LIT_1311_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="LIT_1311_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="LS_1111_LL" type="T_BOOL" access="ReadWrite">
+          <Comment>E.U Level Switch</Comment>
+        </Node>
+        <Node name="LS_1141_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="LS_1901_HH" type="T_BOOL" access="ReadWrite">
+          <Comment>TRO DRAIN UNIT</Comment>
+        </Node>
+        <Node name="MCC_100_OFF" type="T_BOOL" access="ReadWrite">
+          <Comment> MCC-100 BREAKER OFF</Comment>
+        </Node>
+        <Node name="P_132_TRIP" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171A_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171A_OFF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171B_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171B_OFF" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_232_TRIP" type="T_BOOL" access="ReadWrite" />
+        <Node name="PR_FAN_OFF" type="T_BOOL" access="ReadWrite">
+          <Comment>FAN Alarm</Comment>
+        </Node>
+        <Node name="PT_1121_HI" type="T_BOOL" access="ReadWrite">
+          <Comment>Blower Unit</Comment>
+        </Node>
+        <Node name="PT_1121_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1121_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1721_HI" type="T_BOOL" access="ReadWrite">
+          <Comment>SEA WATER FEEDING UNIT</Comment>
+        </Node>
+        <Node name="PT_1721_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1721_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1722_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1722_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT_1722_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1001" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER ERROR</Comment>
+        </Node>
+        <Node name="REC1002" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY INTERNAL SAFETY INTERLOCK</Comment>
+        </Node>
+        <Node name="REC1003" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1004" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1005" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1006" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1007" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1008" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC1009" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER OUTPUT OVER VOLTAGE</Comment>
+        </Node>
+        <Node name="REC1010" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1011" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1012" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1013" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER UNBALANCE CURRENT</Comment>
+        </Node>
+        <Node name="REC1014" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL MODE</Comment>
+        </Node>
+        <Node name="REC1015" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL-REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC1017_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1017_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1018_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1018_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1019_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1019_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1020_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1020_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1021_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1021_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1022" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC1023" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC1024" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC1025" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER EMERGENCY OPERATION</Comment>
+        </Node>
+        <Node name="REC1026" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER FAN ALARM</Comment>
+        </Node>
+        <Node name="REC1027_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1027_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC1032" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY EXTERNAL COMMAND</Comment>
+        </Node>
+        <Node name="REC1033" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2001" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER ERROR</Comment>
+        </Node>
+        <Node name="REC2002" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY INTERNAL SAFETY INTERLOCK</Comment>
+        </Node>
+        <Node name="REC2003" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2004" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2005" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2006" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2007" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2008" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC2009" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER OUTPUT OVER VOLTAGE</Comment>
+        </Node>
+        <Node name="REC2010" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2011" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2012" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2013" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER UNBALANCE CURRENT</Comment>
+        </Node>
+        <Node name="REC2014" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL MODE</Comment>
+        </Node>
+        <Node name="REC2015" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL-REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC2017_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2017_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2018_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2018_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2019_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2019_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2020_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2020_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2021_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2021_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2022" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC2023" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC2024" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC2025" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER EMERGENCY OPERATION</Comment>
+        </Node>
+        <Node name="REC2026" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER FAN ALARM</Comment>
+        </Node>
+        <Node name="REC2027_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2027_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC2032" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY EXTERNAL COMMAND</Comment>
+        </Node>
+        <Node name="REC2033" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3001" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER ERROR</Comment>
+        </Node>
+        <Node name="REC3002" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY INTERNAL SAFETY INTERLOCK</Comment>
+        </Node>
+        <Node name="REC3003" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3004" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3005" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 INPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3006" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3007" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3008" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OUTPUT OVER CURRENT</Comment>
+        </Node>
+        <Node name="REC3009" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER OUTPUT OVER VOLTAGE</Comment>
+        </Node>
+        <Node name="REC3010" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3011" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3012" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3013" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER UNBALANCE CURRENT</Comment>
+        </Node>
+        <Node name="REC3014" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL MODE</Comment>
+        </Node>
+        <Node name="REC3015" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER LOCAL-REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC3017_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3017_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3018_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3018_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3019_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3019_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3020_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3020_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3021_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3021_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3022" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC3023" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC3024" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 FUSE ALARM</Comment>
+        </Node>
+        <Node name="REC3025" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER EMERGENCY OPERATION</Comment>
+        </Node>
+        <Node name="REC3026" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER FAN ALARM</Comment>
+        </Node>
+        <Node name="REC3027_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3027_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="REC3032" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER E-STOP BY EXTERNAL COMMAND</Comment>
+        </Node>
+        <Node name="REC3033" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL OVER TEMPERATURE</Comment>
+        </Node>
+        <Node name="RF_142A_E" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142B_E" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142C_E" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_ALL_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFS_1131" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFS_2131" type="T_BOOL" access="ReadWrite" />
+        <Node name="STR_VV_AL_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="STRO_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="STRO_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="SWFP_BOTH_F" type="T_BOOL" access="ReadWrite" />
+        <Node name="SWFU_DP_HH" type="T_BOOL" access="ReadWrite" />
+        <Node name="SWFU_DP_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="SYS_BYPASS_1" type="T_BOOL" access="ReadWrite">
+          <Comment> BYPASS ALARM</Comment>
+        </Node>
+        <Node name="SYS_BYPASS_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SYS_BYPASS_3" type="T_BOOL" access="ReadWrite" />
+        <Node name="SYS_BYPASS_4" type="T_BOOL" access="ReadWrite" />
+        <Node name="TE_1111_HI" type="T_BOOL" access="ReadWrite">
+          <Comment>Feeding Sea Water Temperature</Comment>
+        </Node>
+        <Node name="TE_1111_LL" type="T_BOOL" access="ReadWrite" />
+        <Node name="TE_1111_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP_01_AL" type="T_BOOL" access="ReadWrite">
+          <Comment> MAIN PUMP ALARM</Comment>
+        </Node>
+        <Node name="WBP_01_FAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP_02_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP_02_FAULT" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1112A_CL" type="T_BOOL" access="ReadWrite">
+          <Comment>E.U Outlet Alarm</Comment>
+        </Node>
+        <Node name="ZS_1112A_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1113A_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1113A_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1114A_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1114A_OP" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Alarm_System">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="BLR_BYPASS" type="T_BOOL" access="ReadWrite">
+          <Comment>BLOWER BYPASS</Comment>
+        </Node>
+        <Node name="CC100_TEMP_HI" type="T_BOOL" access="ReadWrite">
+          <Comment>CC-100 TEMPERATURE HIGH</Comment>
+        </Node>
+        <Node name="DISABLE1" type="T_BOOL" access="ReadWrite">
+          <Comment>STRAINER PRESSURE SENSOR DISABLE</Comment>
+        </Node>
+        <Node name="DISABLE2" type="T_BOOL" access="ReadWrite">
+          <Comment>SEA WATER TEMPERATURE SENSOR DISABLE</Comment>
+        </Node>
+        <Node name="DISABLE3" type="T_BOOL" access="ReadWrite">
+          <Comment>SEA WATER SALINITY SENSOR DISABLE</Comment>
+        </Node>
+        <Node name="DISABLE4" type="T_BOOL" access="ReadWrite">
+          <Comment>N.A TANK LEVEL SENSOR DISABLE</Comment>
+        </Node>
+        <Node name="ESD" type="T_BOOL" access="ReadWrite">
+          <Comment>EMERGENCY ACTIVATION</Comment>
+        </Node>
+        <Node name="ESTOP_CC" type="T_BOOL" access="ReadWrite">
+          <Comment>E-STOP FROM CC-100</Comment>
+        </Node>
+        <Node name="ESTOP_HMI" type="T_BOOL" access="ReadWrite">
+          <Comment>E-STOP FROM HMI</Comment>
+        </Node>
+        <Node name="ESTOP_RF" type="T_BOOL" access="ReadWrite">
+          <Comment>E-STOP FROM RECTIFIER</Comment>
+        </Node>
+        <Node name="GPS_ALARM" type="T_BOOL" access="ReadWrite">
+          <Comment> LOW SALINITY AREA ALARM</Comment>
+        </Node>
+        <Node name="MM_AIT1121" type="T_BOOL" access="ReadWrite">
+          <Comment>AIT-1121 MAINTENANCE MODE</Comment>
+        </Node>
+        <Node name="MM_AIT1122" type="T_BOOL" access="ReadWrite">
+          <Comment>AIT-1122 MAINTENANCE MODE</Comment>
+        </Node>
+        <Node name="MM_AIT1123" type="T_BOOL" access="ReadWrite">
+          <Comment>AIT-1123 MAINTENANCE MODE</Comment>
+        </Node>
+        <Node name="MM_REPAIR" type="T_BOOL" access="ReadWrite">
+          <Comment>REPAIR MODE</Comment>
+        </Node>
+        <Node name="PSD_11" type="T_BOOL" access="ReadWrite">
+          <Comment>STBD Ballasting Process Shutdown Activation</Comment>
+        </Node>
+        <Node name="PSD_12" type="T_BOOL" access="ReadWrite">
+          <Comment>PORT Ballasting Process Shutdown Activation</Comment>
+        </Node>
+        <Node name="PSD_21" type="T_BOOL" access="ReadWrite">
+          <Comment>STBD DeBallasting Process Shutdown Activation</Comment>
+        </Node>
+        <Node name="PSD_22" type="T_BOOL" access="ReadWrite">
+          <Comment>PORT DeBallasting Process Shutdown Activation</Comment>
+        </Node>
+        <Node name="PSD_31" type="T_BOOL" access="ReadWrite">
+          <Comment>Stripping Process Shutdown Activation</Comment>
+        </Node>
+        <Node name="PSD_41" type="T_BOOL" access="ReadWrite">
+          <Comment>NO.1 RECTIFIER SHUTDOWN ACTIVATION</Comment>
+        </Node>
+        <Node name="PSD_42" type="T_BOOL" access="ReadWrite">
+          <Comment>NO.2 RECTIFIER SHUTDOWN ACTIVATION</Comment>
+        </Node>
+        <Node name="PSD_43" type="T_BOOL" access="ReadWrite">
+          <Comment>NO.3 RECTIFIER SHUTDOWN ACTIVATION</Comment>
+        </Node>
+        <Node name="RH_AIT1121_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_AIT1122_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_AIT1123_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_AIT151_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_AIT251_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_EU_AL" type="T_BOOL" access="ReadWrite">
+          <Comment>RUNNING HOUR</Comment>
+        </Node>
+        <Node name="RH_P132_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_P171A_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_P171B_AL" type="T_BOOL" access="ReadWrite" />
+        <Node name="RH_P232_AL" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Event_Device">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="AIT151_A" type="T_BOOL" access="ReadWrite">
+          <Comment> TRO SENSORS</Comment>
+        </Node>
+        <Node name="AIT151_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT151_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT151_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT251_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT251_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT251_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT251_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117A_A" type="T_BOOL" access="ReadWrite">
+          <Comment> BLOWER UNIT</Comment>
+        </Node>
+        <Node name="B117A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117A_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117A_SEL" type="T_BOOL" access="ReadWrite">
+          <Comment>/////////////////////////////////////////////// SELECTION //////////////////////////////////////////////////</Comment>
+        </Node>
+        <Node name="B117A_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA35_A" type="T_BOOL" access="ReadWrite">
+          <Comment>BALLAST VALVES</Comment>
+        </Node>
+        <Node name="BA35_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA36_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA36_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="CIR_ENABLE_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="CIR_ENABLE_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1131_A" type="T_BOOL" access="ReadWrite">
+          <Comment> INJECTION CONTROL VAVLE</Comment>
+        </Node>
+        <Node name="FCV1131_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1131_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1131_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1131_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1211_A" type="T_BOOL" access="ReadWrite">
+          <Comment> TRC CONTROL VAVLE</Comment>
+        </Node>
+        <Node name="FCV1211_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1211_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1211_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1211_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="FULL_AUTO" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP01_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP01_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP01_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="MAINTENANCE" type="T_BOOL" access="ReadWrite">
+          <Comment>Maintenance</Comment>
+        </Node>
+        <Node name="NU_CROSS" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_A" type="T_BOOL" access="ReadWrite">
+          <Comment> N.A UNIT</Comment>
+        </Node>
+        <Node name="P132_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171A_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171A_RUN" type="T_BOOL" access="ReadWrite">
+          <Comment> SEA WATER FEED PUMP</Comment>
+        </Node>
+        <Node name="P171A_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171A_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="P171B_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFA_A" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER</Comment>
+        </Node>
+        <Node name="RFA_DISABLE" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFA_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFA_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFA_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFB_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFB_DISABLE" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFB_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFB_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFB_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFC_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFC_DISABLE" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFC_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFC_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFC_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="SEA_ENABLE" type="T_BOOL" access="ReadWrite" />
+        <Node name="SEA_ENABLE_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="SEA_ENABLE_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="TRO01_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="TRO02_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="TRO_CROSS" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP01_RUN" type="T_BOOL" access="ReadWrite">
+          <Comment> MAIN PUMP</Comment>
+        </Node>
+        <Node name="WBP01_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP02_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP02_SPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1151_A" type="T_BOOL" access="ReadWrite">
+          <Comment> CLOSED TANK VALVE</Comment>
+        </Node>
+        <Node name="XV1151_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1151_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1151_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171A_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1321_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1321_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1321_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1321_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1511_A" type="T_BOOL" access="ReadWrite">
+          <Comment> TRO INLET VALVE	</Comment>
+        </Node>
+        <Node name="XV1511_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1511_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1511_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1512_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1512_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1512_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1512_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1541_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1541_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1541_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1541_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1731_A" type="T_BOOL" access="ReadWrite">
+          <Comment> HEATER INLET/BYPASS VAVLE</Comment>
+        </Node>
+        <Node name="XV1731_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1731_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1731_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1732_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1732_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1732_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1732_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1901_A" type="T_BOOL" access="ReadWrite">
+          <Comment> DRAIN UNIT</Comment>
+        </Node>
+        <Node name="XV1901_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1901_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1901_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2321_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2321_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2321_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2321_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2511_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2511_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2511_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2511_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2512_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2512_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2512_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV2512_OPD" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Event_Operation">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="BAL_IN_PORT" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT BALLASTING  	</Comment>
+        </Node>
+        <Node name="BAL_IN_STBD" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD BALLASTING</Comment>
+        </Node>
+        <Node name="BAL_P_RDY" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT BALLASTING  	</Comment>
+        </Node>
+        <Node name="BAL_S_RDY" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD BALLASTING</Comment>
+        </Node>
+        <Node name="BAL_SP_P" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT BALLASTING  	</Comment>
+        </Node>
+        <Node name="BAL_SP_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD BALLASTING</Comment>
+        </Node>
+        <Node name="BAL_ST_P" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT BALLASTING  	</Comment>
+        </Node>
+        <Node name="BAL_ST_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD BALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_IN_PORT" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_IN_STBD" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_P_RDY" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_S_RDY" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_SP_P" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_SP_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_ST_P" type="T_BOOL" access="ReadWrite">
+          <Comment> PORT DEBALLASTING</Comment>
+        </Node>
+        <Node name="DEBAL_ST_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD DEBALLASTING</Comment>
+        </Node>
+        <Node name="DIAG_IN_SELF" type="T_BOOL" access="ReadWrite">
+          <Comment> SELF-DIAGNOSIS --------------- ADDED BY VER.1</Comment>
+        </Node>
+        <Node name="DIAG_ST" type="T_BOOL" access="ReadWrite">
+          <Comment> SELF-DIAGNOSIS --------------- ADDED BY VER.1</Comment>
+        </Node>
+        <Node name="GSP01_SP_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP01_ST_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_SP_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP02_ST_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="STR_IN_STBD" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD STRIPPING</Comment>
+        </Node>
+        <Node name="STR_S_RDY" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD STRIPPING</Comment>
+        </Node>
+        <Node name="STR_SP_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD STRIPPING</Comment>
+        </Node>
+        <Node name="STR_ST_S" type="T_BOOL" access="ReadWrite">
+          <Comment> STBD STRIPPING</Comment>
+        </Node>
+        <Node name="WBP01_SP_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP01_ST_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP02_SP_REQ" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP02_ST_REQ" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Event_Optrack">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="MF_APT" type="T_BOOL" access="ReadWrite">
+          <Comment> APT LEVEL</Comment>
+        </Node>
+        <Node name="MF_B117_BP" type="T_BOOL" access="ReadWrite">
+          <Comment>BLOWER</Comment>
+        </Node>
+        <Node name="MF_CT1111" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LIT1311" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_NA_PRE_SET" type="T_BOOL" access="ReadWrite">
+          <Comment> NA PRE-SET FUNCTION ACTIVATE ------------ ADDED BY VER 1</Comment>
+        </Node>
+        <Node name="MF_PT1721" type="T_BOOL" access="ReadWrite">
+          <Comment>DISABLE</Comment>
+        </Node>
+        <Node name="MF_TE1111" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT1121_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT1121_ST" type="T_BOOL" access="ReadWrite">
+          <Comment>MAINTENANCE</Comment>
+        </Node>
+        <Node name="MP_AIT1122_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT1122_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT1123_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT1123_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT151_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT151_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT151_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT151_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT251_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT251_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT251_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_AIT251_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117A_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117A_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117A_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117A_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117B_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117B_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_B117B_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_A" type="T_BOOL" access="ReadWrite">
+          <Comment> BALLAST VALVE CONTROL</Comment>
+        </Node>
+        <Node name="MP_BA35_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BAL_SP_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BAL_SP_P" type="T_BOOL" access="ReadWrite">
+          <Comment> Ballasting stop command (Event)</Comment>
+        </Node>
+        <Node name="MP_BAL_SP_S" type="T_BOOL" access="ReadWrite">
+          <Comment> Ballasting stop command (Event)</Comment>
+        </Node>
+        <Node name="MP_BAL_ST_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BAL_ST_P" type="T_BOOL" access="ReadWrite">
+          <Comment> Ballasting start command (Event)</Comment>
+        </Node>
+        <Node name="MP_BAL_ST_S" type="T_BOOL" access="ReadWrite">
+          <Comment> Ballasting start command (Event)</Comment>
+        </Node>
+        <Node name="MP_CIR_DIS_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_CIR_DIS_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_CIR_EN_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_CIR_EN_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_DEBAL_SP_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_DEBAL_SP_P" type="T_BOOL" access="ReadWrite">
+          <Comment> Deballasting stop command (Event)</Comment>
+        </Node>
+        <Node name="MP_DEBAL_SP_S" type="T_BOOL" access="ReadWrite">
+          <Comment> Deballasting stop command (Event)</Comment>
+        </Node>
+        <Node name="MP_DEBAL_ST_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_DEBAL_ST_P" type="T_BOOL" access="ReadWrite">
+          <Comment> Deballasting start command (Event)</Comment>
+        </Node>
+        <Node name="MP_DEBAL_ST_S" type="T_BOOL" access="ReadWrite">
+          <Comment> Deballasting start command (Event)</Comment>
+        </Node>
+        <Node name="MP_DIAG_ST" type="T_BOOL" access="ReadWrite">
+          <Comment> SELF-DIAGNOSIS</Comment>
+        </Node>
+        <Node name="MP_ESTOP" type="T_BOOL" access="ReadWrite">
+          <Comment>BALLAST VALVE(YARD)
+E-STOP</Comment>
+        </Node>
+        <Node name="MP_FCV1131_A" type="T_BOOL" access="ReadWrite">
+          <Comment>INJECTION VALVES</Comment>
+        </Node>
+        <Node name="MP_FCV1131_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV1131_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV1211_A" type="T_BOOL" access="ReadWrite">
+          <Comment>MAIN TRC VALVES</Comment>
+        </Node>
+        <Node name="MP_FCV1211_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV1211_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2131_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2131_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2131_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2211_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2211_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_FCV2211_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_GSP01_SEL" type="T_BOOL" access="ReadWrite">
+          <Comment>G.S PUMP</Comment>
+        </Node>
+        <Node name="MP_GSP02_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_NU_CROSS" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_NU_NORMAL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P132_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171A_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171A_SEL" type="T_BOOL" access="ReadWrite">
+          <Comment>SEA WATER FEED PUMP</Comment>
+        </Node>
+        <Node name="MP_P171A_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171A_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171B_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171B_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P171B_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_P232_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_REPAIR_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_REPAIR_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RESET" type="T_BOOL" access="ReadWrite">
+          <Comment>RESET</Comment>
+        </Node>
+        <Node name="MP_RFA_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFA_DIS" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFA_EN" type="T_BOOL" access="ReadWrite">
+          <Comment>RECTIFIER</Comment>
+        </Node>
+        <Node name="MP_RFA_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFA_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFA_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFA_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_DIS" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_EN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFB_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_DIS" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_EN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_SET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RFC_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_AIT1121_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_AIT1122_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_AIT1123_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_AIT151_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_AIT251_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_BAL_M_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_DEBAL_M_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_EM_PARTIAL_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_EM_TOTAL_RESET" type="T_BOOL" access="ReadWrite">
+          <Comment> RUNNING HOUR</Comment>
+        </Node>
+        <Node name="MP_RH_P132_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_P171A_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_P171B_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_P232_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_RH_STRIP_RESET" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SEA_DIS_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SEA_DIS_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SEA_EN_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SEA_EN_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SOUNDOFF" type="T_BOOL" access="ReadWrite">
+          <Comment>ACK</Comment>
+        </Node>
+        <Node name="MP_STRIP_SP_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_STRIP_SP_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_STRIP_ST_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_STRIP_ST_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_TRC_SET_MAIN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_TRO01_SEL" type="T_BOOL" access="ReadWrite">
+          <Comment>TRO SENSOR</Comment>
+        </Node>
+        <Node name="MP_TRO02_SEL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_TRO_CROSS" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_TRO_NORMAL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1151_A" type="T_BOOL" access="ReadWrite">
+          <Comment>CLOSED TANK VALVE</Comment>
+        </Node>
+        <Node name="MP_XV1151_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1151_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1151_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171A_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171A_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171A_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171A_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171B_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171B_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171B_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1171B_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1172A_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1172A_OP" type="T_BOOL" access="ReadWrite">
+          <Comment>AIR DILUTION VALVE</Comment>
+        </Node>
+        <Node name="MP_XV1321_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1321_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1321_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1321_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1511_A" type="T_BOOL" access="ReadWrite">
+          <Comment>TRO INLET VALVE</Comment>
+        </Node>
+        <Node name="MP_XV1511_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1511_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1511_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1512_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1512_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1512_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1512_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1541_A" type="T_BOOL" access="ReadWrite">
+          <Comment>TRO SAMPLING UNIT</Comment>
+        </Node>
+        <Node name="MP_XV1541_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1541_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1541_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1731_A" type="T_BOOL" access="ReadWrite">
+          <Comment>HEATER INLET/BYPSS VALVES</Comment>
+        </Node>
+        <Node name="MP_XV1731_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1731_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1731_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1732_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1732_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1732_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1732_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1901_A" type="T_BOOL" access="ReadWrite">
+          <Comment>DRAIN UNIT</Comment>
+        </Node>
+        <Node name="MP_XV1901_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1901_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV1901_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2321_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2321_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2321_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2321_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2511_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2511_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2511_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2511_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2512_A" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2512_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2512_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_XV2512_OP" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_IO_AI">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="AIT_1121" type="T_REAL" access="ReadWrite" />
+        <Node name="AIT_1122" type="T_REAL" access="ReadWrite" />
+        <Node name="AIT_1123" type="T_REAL" access="ReadWrite" />
+        <Node name="AIT_151" type="T_REAL" access="ReadWrite" />
+        <Node name="AIT_251" type="T_REAL" access="ReadWrite" />
+        <Node name="AP_LVL_01" type="T_REAL" access="ReadWrite" />
+        <Node name="CT_1111" type="T_REAL" access="ReadWrite">
+          <Comment> Analog Input</Comment>
+        </Node>
+        <Node name="FCV_1131_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV_1211_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV_2131_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV_2211_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="FIT_1131" type="T_REAL" access="ReadWrite" />
+        <Node name="FIT_1211" type="T_REAL" access="ReadWrite" />
+        <Node name="FIT_2131" type="T_REAL" access="ReadWrite" />
+        <Node name="FIT_2211" type="T_REAL" access="ReadWrite" />
+        <Node name="LIT_1311" type="T_REAL" access="ReadWrite" />
+        <Node name="P_132_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="P_232_FD" type="T_REAL" access="ReadWrite" />
+        <Node name="PT_1121" type="T_REAL" access="ReadWrite" />
+        <Node name="PT_1721" type="T_REAL" access="ReadWrite" />
+        <Node name="PT_1722" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_AIT_151" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_AIT_251" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_AP_LVL_01" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_CT_1111" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_FIT_1131" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_FIT_1211" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_FIT_2131" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_FIT_2211" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_PT_1121" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_PT_1721" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_PT_1722" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_TE_1111" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_AIT_151" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_AIT_251" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_AP_LVL_01" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_CT_1111" type="T_REAL" access="ReadWrite">
+          <Comment>//////////////////////////////////////////////////////// ANALOGUE RANGE ///////////////////////////////////////////////////////////</Comment>
+        </Node>
+        <Node name="RL_FIT_1131" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_FIT_1211" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_FIT_2131" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_FIT_2211" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_PT_1121" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_PT_1721" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_PT_1722" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_TE_1111" type="T_REAL" access="ReadWrite" />
+        <Node name="TE_1111" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_IO_AO">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="FCV_1131_CMD" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV_1211_CMD" type="T_REAL" access="ReadWrite">
+          <Comment> Analog Output</Comment>
+        </Node>
+        <Node name="FCV_2131_CMD" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV_2211_CMD" type="T_REAL" access="ReadWrite" />
+        <Node name="P_132_CMD" type="T_REAL" access="ReadWrite" />
+        <Node name="P_232_CMD" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_IO_DI">
+        <Comment>{attribute 'qualified_only'} // Digital Input</Comment>
+        <Node name="B_117A_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117B_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="BWTS_002" type="T_BOOL" access="ReadWrite">
+          <Comment>Sound off cc-100 </Comment>
+        </Node>
+        <Node name="BWTS_008" type="T_BOOL" access="ReadWrite">
+          <Comment>//////////////////// END : Tags that registered as an Event </Comment>
+        </Node>
+        <Node name="BWTS_MODE" type="T_BOOL" access="ReadWrite" />
+        <Node name="ER_01_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="ER_02_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="ER_03_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="ER_04_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_01_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_02_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="LS_1111" type="T_BOOL" access="ReadWrite">
+          <Comment> Tags that registered as an Event</Comment>
+        </Node>
+        <Node name="LS_1141" type="T_BOOL" access="ReadWrite" />
+        <Node name="LS_1901_HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="LS_1901_LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_132_RMT" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_132_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171A_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171B_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_232_RMT" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_232_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="PR_01_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="PR_02_FAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP_01_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="WBP_02_RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171A_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171A_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171B_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171B_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1112A_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1113A_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZS_1114A_OPD" type="T_BOOL" access="ReadWrite">
+          <Comment>////////////////// FOR SIMULATION</Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_IO_DO">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="AIT_151_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT_251_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117A_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="B_117B_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="BWTS_003" type="T_BOOL" access="ReadWrite">
+          <Comment>Shutdown alarm Lamp</Comment>
+        </Node>
+        <Node name="BWTS_004" type="T_BOOL" access="ReadWrite">
+          <Comment>Common alarm Lamp</Comment>
+        </Node>
+        <Node name="BWTS_005" type="T_BOOL" access="ReadWrite">
+          <Comment> BWTS COMMON ALARM TO AMS	</Comment>
+        </Node>
+        <Node name="BWTS_006" type="T_BOOL" access="ReadWrite">
+          <Comment> BWTS SHUTDOWN ALARM TO AMS</Comment>
+        </Node>
+        <Node name="BWTS_007" type="T_BOOL" access="ReadWrite">
+          <Comment>Alarm buzzer</Comment>
+        </Node>
+        <Node name="BWTS_009" type="T_BOOL" access="ReadWrite">
+          <Comment> BWTS RUNNING TO AMS</Comment>
+        </Node>
+        <Node name="GSP_01_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="GSP_02_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_132_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171A_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_171B_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="P_232_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142A_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142A_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142B_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142B_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142C_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_142C_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1151_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171A_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1171B_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1172A_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1321_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1511_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1512_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1541_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1731_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1732_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_1901_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_2321_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_2511_CMD" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV_2512_CMD" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_IO_RECTIFIER">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="REC1000" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER RUNNING</Comment>
+        </Node>
+        <Node name="REC1016" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC1017" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT CURRENT</Comment>
+        </Node>
+        <Node name="REC1018" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT VOLTAGE</Comment>
+        </Node>
+        <Node name="REC1019" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1020" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1021" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1027" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC1028" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#1 CURRENT</Comment>
+        </Node>
+        <Node name="REC1029" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#2 CURRENT</Comment>
+        </Node>
+        <Node name="REC1030" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#3 CURRENT</Comment>
+        </Node>
+        <Node name="REC1031" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#4 CURRENT</Comment>
+        </Node>
+        <Node name="REC1041" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER START/STOP</Comment>
+        </Node>
+        <Node name="REC1043" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER CURRENT SET</Comment>
+        </Node>
+        <Node name="REC2000" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER RUNNING</Comment>
+        </Node>
+        <Node name="REC2016" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC2017" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT CURRENT</Comment>
+        </Node>
+        <Node name="REC2018" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT VOLTAGE</Comment>
+        </Node>
+        <Node name="REC2019" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2020" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2021" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2027" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC2028" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#1 CURRENT</Comment>
+        </Node>
+        <Node name="REC2029" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#2 CURRENT</Comment>
+        </Node>
+        <Node name="REC2030" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#3 CURRENT</Comment>
+        </Node>
+        <Node name="REC2031" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#4 CURRENT</Comment>
+        </Node>
+        <Node name="REC2041" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER START/STOP</Comment>
+        </Node>
+        <Node name="REC2043" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER CURRENT SET</Comment>
+        </Node>
+        <Node name="REC3000" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER RUNNING</Comment>
+        </Node>
+        <Node name="REC3016" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER REMOTE MODE</Comment>
+        </Node>
+        <Node name="REC3017" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT CURRENT</Comment>
+        </Node>
+        <Node name="REC3018" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER TOTAL OUTPUT VOLTAGE</Comment>
+        </Node>
+        <Node name="REC3019" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE1 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3020" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE2 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3021" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER MODULE3 TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3027" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INTERNAL TEMPERATURE</Comment>
+        </Node>
+        <Node name="REC3028" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#1 CURRENT</Comment>
+        </Node>
+        <Node name="REC3029" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#2 CURRENT</Comment>
+        </Node>
+        <Node name="REC3030" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#3 CURRENT</Comment>
+        </Node>
+        <Node name="REC3031" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER SHUNT#4 CURRENT</Comment>
+        </Node>
+        <Node name="REC3041" type="T_BOOL" access="ReadWrite">
+          <Comment> RECTIFIER START/STOP</Comment>
+        </Node>
+        <Node name="REC3043" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER CURRENT SET</Comment>
+        </Node>
+        <Node name="RF142A" type="T_ARRAY__1__34__OF_WORD" access="ReadWrite">
+          <Comment> Buffer for registers (receive or send)  </Comment>
+        </Node>
+        <Node name="RF142B" type="T_ARRAY__1__34__OF_WORD" access="ReadWrite">
+          <Comment> Buffer for registers (receive or send)  </Comment>
+        </Node>
+        <Node name="RF142C" type="T_ARRAY__1__34__OF_WORD" access="ReadWrite">
+          <Comment> Buffer for registers (receive or send)  </Comment>
+        </Node>
+        <Node name="RH_REC1017" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC1018" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC1043" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC2017" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC2018" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC2043" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC3017" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC3018" type="T_REAL" access="ReadWrite" />
+        <Node name="RH_REC3043" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC1017" type="T_REAL" access="ReadWrite">
+          <Comment>//////////////////////////////////////////////////////// ANALOGUE RANGE ///////////////////////////////////////////////////////////</Comment>
+        </Node>
+        <Node name="RL_REC1018" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC1043" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC2017" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC2018" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC2043" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC3017" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC3018" type="T_REAL" access="ReadWrite" />
+        <Node name="RL_REC3043" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_IO_TRO">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="TRO1000" type="T_REAL" access="ReadWrite">
+          <Comment> TRO Value</Comment>
+        </Node>
+        <Node name="TRO1001" type="T_REAL" access="ReadWrite">
+          <Comment> Remaining Reagent</Comment>
+        </Node>
+        <Node name="TRO1002" type="T_BOOL" access="ReadWrite">
+          <Comment> Common Alarm</Comment>
+        </Node>
+        <Node name="TRO1003" type="T_BOOL" access="ReadWrite">
+          <Comment> Visible lamp blown fail</Comment>
+        </Node>
+        <Node name="TRO1004" type="T_BOOL" access="ReadWrite">
+          <Comment> Intake solenoid fail</Comment>
+        </Node>
+        <Node name="TRO1005" type="T_BOOL" access="ReadWrite">
+          <Comment> Drain solenoid fail</Comment>
+        </Node>
+        <Node name="TRO1006" type="T_BOOL" access="ReadWrite">
+          <Comment> Bypass solenoid fail</Comment>
+        </Node>
+        <Node name="TRO1007" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent solenoid (indicator)</Comment>
+        </Node>
+        <Node name="TRO1008" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent solenoid (buffer) fail</Comment>
+        </Node>
+        <Node name="TRO1009" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent motor (indicator) fail</Comment>
+        </Node>
+        <Node name="TRO1010" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent motor (buffer) fail</Comment>
+        </Node>
+        <Node name="TRO1011" type="T_BOOL" access="ReadWrite">
+          <Comment> No water</Comment>
+        </Node>
+        <Node name="TRO1012" type="T_BOOL" access="ReadWrite">
+          <Comment> Water slow</Comment>
+        </Node>
+        <Node name="TRO1013" type="T_BOOL" access="ReadWrite">
+          <Comment> Water fast</Comment>
+        </Node>
+        <Node name="TRO1101" type="T_BOOL" access="ReadWrite">
+          <Comment> SENSING START</Comment>
+        </Node>
+        <Node name="TRO1102" type="T_BOOL" access="ReadWrite">
+          <Comment> ALL CHECK</Comment>
+        </Node>
+        <Node name="TRO151" type="T_ARRAY__1__5__OF_WORD" access="ReadWrite">
+          <Comment> Buffer for registers (receive or send) </Comment>
+        </Node>
+        <Node name="TRO2000" type="T_REAL" access="ReadWrite">
+          <Comment> TRO Value</Comment>
+        </Node>
+        <Node name="TRO2001" type="T_REAL" access="ReadWrite">
+          <Comment> Remaining Reagent</Comment>
+        </Node>
+        <Node name="TRO2002" type="T_BOOL" access="ReadWrite">
+          <Comment> Common Alarm</Comment>
+        </Node>
+        <Node name="TRO2003" type="T_BOOL" access="ReadWrite">
+          <Comment> Visible lamp blown fail</Comment>
+        </Node>
+        <Node name="TRO2004" type="T_BOOL" access="ReadWrite">
+          <Comment> Intake solenoid fail</Comment>
+        </Node>
+        <Node name="TRO2005" type="T_BOOL" access="ReadWrite">
+          <Comment> Drain solenoid fail</Comment>
+        </Node>
+        <Node name="TRO2006" type="T_BOOL" access="ReadWrite">
+          <Comment> Bypass solenoid fail</Comment>
+        </Node>
+        <Node name="TRO2007" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent solenoid (indicator)</Comment>
+        </Node>
+        <Node name="TRO2008" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent solenoid (buffer) fail</Comment>
+        </Node>
+        <Node name="TRO2009" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent motor (indicator) fail</Comment>
+        </Node>
+        <Node name="TRO2010" type="T_BOOL" access="ReadWrite">
+          <Comment> Reagent motor (buffer) fail</Comment>
+        </Node>
+        <Node name="TRO2011" type="T_BOOL" access="ReadWrite">
+          <Comment> No water</Comment>
+        </Node>
+        <Node name="TRO2012" type="T_BOOL" access="ReadWrite">
+          <Comment> Water slow</Comment>
+        </Node>
+        <Node name="TRO2013" type="T_BOOL" access="ReadWrite">
+          <Comment> Water fast</Comment>
+        </Node>
+        <Node name="TRO2101" type="T_BOOL" access="ReadWrite">
+          <Comment> SENSING START</Comment>
+        </Node>
+        <Node name="TRO2102" type="T_BOOL" access="ReadWrite">
+          <Comment> ALL CHECK</Comment>
+        </Node>
+        <Node name="TRO251" type="T_ARRAY__1__5__OF_WORD" access="ReadWrite">
+          <Comment> Buffer for registers (receive or send) </Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_SEQ_LIB">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="BSP_P_01" type="T_SEQ" access="ReadWrite">
+          <Comment> Rectifier Stop</Comment>
+        </Node>
+        <Node name="BSP_P_03" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Stop Request</Comment>
+        </Node>
+        <Node name="BSP_P_04" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Unit Stop</Comment>
+        </Node>
+        <Node name="BSP_P_05" type="T_SEQ" access="ReadWrite">
+          <Comment> S.W.F.P Stop</Comment>
+        </Node>
+        <Node name="BSP_P_07" type="T_SEQ" access="ReadWrite">
+          <Comment> H/E Valve Close</Comment>
+        </Node>
+        <Node name="BSP_P_08" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Valve Close</Comment>
+        </Node>
+        <Node name="BSP_P_09" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Close</Comment>
+        </Node>
+        <Node name="BSP_P_10" type="T_SEQ" access="ReadWrite">
+          <Comment> Blower Stop</Comment>
+        </Node>
+        <Node name="BSP_P_12" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valve Act.</Comment>
+        </Node>
+        <Node name="BSP_S_01" type="T_SEQ" access="ReadWrite">
+          <Comment> Rectifier Stop</Comment>
+        </Node>
+        <Node name="BSP_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Stop Request</Comment>
+        </Node>
+        <Node name="BSP_S_04" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Unit Stop</Comment>
+        </Node>
+        <Node name="BSP_S_05" type="T_SEQ" access="ReadWrite">
+          <Comment> S.W.F.P Stop</Comment>
+        </Node>
+        <Node name="BSP_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> H/E Valve Close</Comment>
+        </Node>
+        <Node name="BSP_S_08" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Valve Close</Comment>
+        </Node>
+        <Node name="BSP_S_09" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Close</Comment>
+        </Node>
+        <Node name="BSP_S_10" type="T_SEQ" access="ReadWrite">
+          <Comment> Blower Stop</Comment>
+        </Node>
+        <Node name="BSP_S_12" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valve Act.</Comment>
+        </Node>
+        <Node name="BST_P_01" type="T_SEQ" access="ReadWrite">
+          <Comment> Blower Start</Comment>
+        </Node>
+        <Node name="BST_P_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_P_04" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_P_05" type="T_SEQ" access="ReadWrite">
+          <Comment> H/E Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_P_06" type="T_SEQ" access="ReadWrite">
+          <Comment> S.W.F.P Start</Comment>
+        </Node>
+        <Node name="BST_P_07" type="T_SEQ" access="ReadWrite">
+          <Comment> E/U Level Check</Comment>
+        </Node>
+        <Node name="BST_P_08" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Start Request</Comment>
+        </Node>
+        <Node name="BST_P_10" type="T_SEQ" access="ReadWrite">
+          <Comment> Salinity Check</Comment>
+        </Node>
+        <Node name="BST_P_12" type="T_SEQ" access="ReadWrite">
+          <Comment> Main flow Control</Comment>
+        </Node>
+        <Node name="BST_P_13" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Flow Control</Comment>
+        </Node>
+        <Node name="BST_P_14" type="T_SEQ" access="ReadWrite">
+          <Comment> Rectifier Start</Comment>
+        </Node>
+        <Node name="BST_P_15" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Valve Open</Comment>
+        </Node>
+        <Node name="BST_P_16" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Sensing Start</Comment>
+        </Node>
+        <Node name="BST_P_18" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valves ACtion</Comment>
+        </Node>
+        <Node name="BST_S_01" type="T_SEQ" access="ReadWrite">
+          <Comment> Blower Start</Comment>
+        </Node>
+        <Node name="BST_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_S_04" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_S_05" type="T_SEQ" access="ReadWrite">
+          <Comment> H/E Valve Init. Open</Comment>
+        </Node>
+        <Node name="BST_S_06" type="T_SEQ" access="ReadWrite">
+          <Comment> S.W.F.P Start</Comment>
+        </Node>
+        <Node name="BST_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> E/U Level Check</Comment>
+        </Node>
+        <Node name="BST_S_08" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Start Request</Comment>
+        </Node>
+        <Node name="BST_S_10" type="T_SEQ" access="ReadWrite">
+          <Comment> Salinity Check</Comment>
+        </Node>
+        <Node name="BST_S_12" type="T_SEQ" access="ReadWrite">
+          <Comment> Main flow Control</Comment>
+        </Node>
+        <Node name="BST_S_13" type="T_SEQ" access="ReadWrite">
+          <Comment> Inj. Flow Control</Comment>
+        </Node>
+        <Node name="BST_S_14" type="T_SEQ" access="ReadWrite">
+          <Comment> Rectifier Start</Comment>
+        </Node>
+        <Node name="BST_S_15" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Valve Open</Comment>
+        </Node>
+        <Node name="BST_S_16" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Sensing Start</Comment>
+        </Node>
+        <Node name="BST_S_18" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valves ACtion</Comment>
+        </Node>
+        <Node name="DIAG_B117A_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_B117A_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_B117A_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_B117B_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_B117B_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_B117B_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA35_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA35_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA35_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA36_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA36_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA36_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA37_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA37_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA37_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA38_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA38_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_BA38_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1131_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1131_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1131_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1131_4" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1211_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1211_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1211_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV1211_4" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2131_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2131_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2131_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2131_4" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2211_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2211_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2211_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_FCV2211_4" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P132_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P132_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P132_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P232_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P232_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_P232_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171A_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171A_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171A_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171B_1" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171B_2" type="T_SEQ" access="ReadWrite" />
+        <Node name="DIAG_XV1171B_3" type="T_SEQ" access="ReadWrite" />
+        <Node name="DSP_P_01" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Stop Request</Comment>
+        </Node>
+        <Node name="DSP_P_02" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Pump Stop</Comment>
+        </Node>
+        <Node name="DSP_P_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Unit Stop</Comment>
+        </Node>
+        <Node name="DSP_P_05" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Close</Comment>
+        </Node>
+        <Node name="DSP_P_06" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Inj. Valve Close</Comment>
+        </Node>
+        <Node name="DSP_P_07" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valve Act.</Comment>
+        </Node>
+        <Node name="DSP_S_01" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Stop Request</Comment>
+        </Node>
+        <Node name="DSP_S_02" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Pump Stop</Comment>
+        </Node>
+        <Node name="DSP_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Unit Stop</Comment>
+        </Node>
+        <Node name="DSP_S_05" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Close</Comment>
+        </Node>
+        <Node name="DSP_S_06" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Inj. Valve Close</Comment>
+        </Node>
+        <Node name="DSP_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valve Act.</Comment>
+        </Node>
+        <Node name="DST_P_02" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Init. Open        </Comment>
+        </Node>
+        <Node name="DST_P_03" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Start</Comment>
+        </Node>
+        <Node name="DST_P_04" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Start Request            </Comment>
+        </Node>
+        <Node name="DST_P_05" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Valve Open         </Comment>
+        </Node>
+        <Node name="DST_P_06" type="T_SEQ" access="ReadWrite">
+          <Comment> Main Flow Control</Comment>
+        </Node>
+        <Node name="DST_P_07" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Sensing Start          </Comment>
+        </Node>
+        <Node name="DST_P_08" type="T_SEQ" access="ReadWrite">
+          <Comment> Recirculation Mode       </Comment>
+        </Node>
+        <Node name="DST_P_09" type="T_SEQ" access="ReadWrite">
+          <Comment> Discharge Mode</Comment>
+        </Node>
+        <Node name="DST_S_02" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Init. Open        </Comment>
+        </Node>
+        <Node name="DST_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Start</Comment>
+        </Node>
+        <Node name="DST_S_04" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Start Request            </Comment>
+        </Node>
+        <Node name="DST_S_05" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Valve Open         </Comment>
+        </Node>
+        <Node name="DST_S_06" type="T_SEQ" access="ReadWrite">
+          <Comment> Main Flow Control</Comment>
+        </Node>
+        <Node name="DST_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Sensing Start          </Comment>
+        </Node>
+        <Node name="DST_S_08" type="T_SEQ" access="ReadWrite">
+          <Comment> Recirculation Mode       </Comment>
+        </Node>
+        <Node name="DST_S_09" type="T_SEQ" access="ReadWrite">
+          <Comment> Discharge Mode</Comment>
+        </Node>
+        <Node name="ESD01" type="T_PSD" access="ReadWrite">
+          <Comment> Emergency Shutdown</Comment>
+        </Node>
+        <Node name="MST_BSP_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_BSP_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_BST_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_BST_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_DIAG" type="T_SEQ" access="ReadWrite">
+          <Comment> SELF-DIAGNOSIS ---------- ADDED BY VER 1</Comment>
+        </Node>
+        <Node name="MST_DSP_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_DSP_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_DST_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_DST_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_SSP_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_SSP_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_SST_P" type="T_SEQ" access="ReadWrite" />
+        <Node name="MST_SST_S" type="T_SEQ" access="ReadWrite" />
+        <Node name="PSD10" type="T_PSD" access="ReadWrite">
+          <Comment> Ballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD101" type="T_PSD" access="ReadWrite">
+          <Comment> Ballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD102" type="T_PSD" access="ReadWrite">
+          <Comment> Ballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD103" type="T_PSD" access="ReadWrite">
+          <Comment> Ballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD11" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD111" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD113" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD114" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD115" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD12" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD121" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD123" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD124" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD125" type="T_PSD" access="ReadWrite">
+          <Comment> Ballast PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD20" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD201" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD21" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD211" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD212" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD213" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD22" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD221" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD222" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD223" type="T_PSD" access="ReadWrite">
+          <Comment> Deballasting PORT Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD30" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD301" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping Common Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD31" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD311" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD312" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD313" type="T_PSD" access="ReadWrite">
+          <Comment> Stripping STBD Process Shutdown</Comment>
+        </Node>
+        <Node name="PSD41" type="T_PSD" access="ReadWrite" />
+        <Node name="PSD42" type="T_PSD" access="ReadWrite" />
+        <Node name="PSD43" type="T_PSD" access="ReadWrite" />
+        <Node name="SEQ112" type="T_PSD" access="ReadWrite">
+          <Comment> Sequence Fail</Comment>
+        </Node>
+        <Node name="SEQ122" type="T_PSD" access="ReadWrite">
+          <Comment> Sequence Fail</Comment>
+        </Node>
+        <Node name="SEQ212" type="T_PSD" access="ReadWrite">
+          <Comment> Sequence Fail</Comment>
+        </Node>
+        <Node name="SEQ222" type="T_PSD" access="ReadWrite">
+          <Comment> Sequence Fail</Comment>
+        </Node>
+        <Node name="SEQ312" type="T_PSD" access="ReadWrite">
+          <Comment> Sequence Fail</Comment>
+        </Node>
+        <Node name="SSP_S_01" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Stop Request</Comment>
+        </Node>
+        <Node name="SSP_S_02" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Pump Stop </Comment>
+        </Node>
+        <Node name="SSP_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Unit Stop</Comment>
+        </Node>
+        <Node name="SSP_S_04" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Inj. Valve Close</Comment>
+        </Node>
+        <Node name="SSP_S_06" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Close</Comment>
+        </Node>
+        <Node name="SSP_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> Eductor Valve Close</Comment>
+        </Node>
+        <Node name="SST_S_01" type="T_SEQ" access="ReadWrite">
+          <Comment> N/U Start          </Comment>
+        </Node>
+        <Node name="SST_S_02" type="T_SEQ" access="ReadWrite">
+          <Comment> WBP Start Request       </Comment>
+        </Node>
+        <Node name="SST_S_03" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Valve Open</Comment>
+        </Node>
+        <Node name="SST_S_04" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Sensing Start           </Comment>
+        </Node>
+        <Node name="SST_S_06" type="T_SEQ" access="ReadWrite">
+          <Comment> TRC Valve Open         </Comment>
+        </Node>
+        <Node name="SST_S_07" type="T_SEQ" access="ReadWrite">
+          <Comment> Ballast Valves Action          </Comment>
+        </Node>
+        <Node name="SST_S_08" type="T_SEQ" access="ReadWrite">
+          <Comment> Eductor Valve Open       </Comment>
+        </Node>
+        <Node name="SST_S_09" type="T_SEQ" access="ReadWrite">
+          <Comment> TRO Booster Unit Start</Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_SIMULATION">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="BA30_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA30_OPD" type="T_BOOL" access="ReadWrite">
+          <Comment> BALLAST VALVES</Comment>
+        </Node>
+        <Node name="BA31_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA31_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA32_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA32_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA33_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA33_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA34_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA34_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA35_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA35_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA36_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA36_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA37_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA38_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA39_CLD" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA39_OPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_AIT1121_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_AIT1122_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_AIT1123_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_AIT151_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_AIT251_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_APLVL01_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_B117ARUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_B117ARUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_B117BRUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_B117BRUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_BWTS008" type="T_BOOL" access="ReadWrite">
+          <Comment> Simulation Manual Set (Digital)</Comment>
+        </Node>
+        <Node name="MF_BWTS008_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_CT1111_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_F121F" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_F121F_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_F221F" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_F221F_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_FIT1131_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_FIT1211_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_FIT2131_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_FIT2211_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LIT1311_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1111" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1111_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1141" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1141_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1901HI" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1901HI_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1901LO" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_LS1901LO_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P132RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P132RUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P171ARUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P171ARUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P171BRUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P171BRUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P232RUN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_P232RUN_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PIT1211_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PIT1212_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PIT2211_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PIT2212_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PT1121_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PT1721_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_PT1722_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_TE1111_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1112AOPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1112AOPD_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1113AOPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1113AOPD_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1114AOPD" type="T_BOOL" access="ReadWrite" />
+        <Node name="MF_ZS1114AOPD_MAN" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA30_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA30_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA31_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA31_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA32_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA32_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA33_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA33_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA34_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA34_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA35_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA36_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA37_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA38_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA39_V_CL" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_BA39_V_OP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN10_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN10_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN10_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN10_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN1_ST" type="T_BOOL" access="ReadWrite">
+          <Comment> SCENARIO</Comment>
+        </Node>
+        <Node name="MP_SCEN2_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN2_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN2_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN2_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN3_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN3_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN3_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN3_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN4_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN4_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN4_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN4_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN5_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN5_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN6_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN6_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN7_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN7_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN8_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN8_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN8_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN8_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN9_1_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN9_1_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN9_2_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="MP_SCEN9_2_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="MS_AIT1121" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1122" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1123" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT151" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT251" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_APLVL01" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_BLR_CAPA" type="T_REAL" access="ReadWrite">
+          <Comment> Blower Capacity</Comment>
+        </Node>
+        <Node name="MS_CONTROL_FACT" type="T_REAL" access="ReadWrite">
+          <Comment> Heat Exchanger Control factor</Comment>
+        </Node>
+        <Node name="MS_CT1111" type="T_REAL" access="ReadWrite">
+          <Comment> Simulation Manual Set (Analogue)</Comment>
+        </Node>
+        <Node name="MS_FIT1131" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT1211" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2131" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2211" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FU_AREA" type="T_REAL" access="ReadWrite">
+          <Comment> Filtration Area for filter DP.</Comment>
+        </Node>
+        <Node name="MS_HEAT_CAPA" type="T_REAL" access="ReadWrite">
+          <Comment> Heat Exchanger Capacity</Comment>
+        </Node>
+        <Node name="MS_LIT1311" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_NA_CAPA" type="T_REAL" access="ReadWrite">
+          <Comment> N.A Pump Capacity</Comment>
+        </Node>
+        <Node name="MS_PIT1211" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PIT1212" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PIT2211" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PIT2212" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1121" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1721" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1722" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RESIDUAL_TRO" type="T_REAL" access="ReadWrite">
+          <Comment> Residual TRO Value in Ballast Tank</Comment>
+        </Node>
+        <Node name="MS_SCEN10_1" type="T_REAL" access="ReadWrite">
+          <Comment> NA Tank Level Low </Comment>
+        </Node>
+        <Node name="MS_SCEN10_2" type="T_REAL" access="ReadWrite">
+          <Comment> NA Tank Level Too Low</Comment>
+        </Node>
+        <Node name="MS_SCEN2_1" type="T_REAL" access="ReadWrite">
+          <Comment>////////////////////////////////////////////////////////// SIMULATION PARAMETER</Comment>
+        </Node>
+        <Node name="MS_SCEN2_2" type="T_REAL" access="ReadWrite">
+          <Comment> Salinity Too Low</Comment>
+        </Node>
+        <Node name="MS_SCEN3_1" type="T_REAL" access="ReadWrite">
+          <Comment> Temperature Low</Comment>
+        </Node>
+        <Node name="MS_SCEN3_2" type="T_REAL" access="ReadWrite">
+          <Comment> Temperature Too Low</Comment>
+        </Node>
+        <Node name="MS_SCEN4_1" type="T_REAL" access="ReadWrite">
+          <Comment> Filter DP High</Comment>
+        </Node>
+        <Node name="MS_SCEN4_2" type="T_REAL" access="ReadWrite">
+          <Comment> Filter DP Too High</Comment>
+        </Node>
+        <Node name="MS_SCEN8_1_1" type="T_REAL" access="ReadWrite">
+          <Comment> TRO HIGH BAL</Comment>
+        </Node>
+        <Node name="MS_SCEN8_1_2" type="T_REAL" access="ReadWrite">
+          <Comment> TRO HIGH DEBAL</Comment>
+        </Node>
+        <Node name="MS_SCEN8_2_1" type="T_REAL" access="ReadWrite">
+          <Comment> TRO TOO HIGH BAL</Comment>
+        </Node>
+        <Node name="MS_SCEN8_2_2" type="T_REAL" access="ReadWrite">
+          <Comment> TRO TOO HIGH DEBAL</Comment>
+        </Node>
+        <Node name="MS_SCEN9_1" type="T_REAL" access="ReadWrite">
+          <Comment> TRO Low Bal</Comment>
+        </Node>
+        <Node name="MS_SCEN9_2" type="T_REAL" access="ReadWrite">
+          <Comment> TRO Too Low Bal</Comment>
+        </Node>
+        <Node name="MS_SLOPE_FACT" type="T_REAL" access="ReadWrite">
+          <Comment> Heat Exchanger Slope factor</Comment>
+        </Node>
+        <Node name="MS_SW_IN" type="T_REAL" access="ReadWrite">
+          <Comment> Source Water Temperature</Comment>
+        </Node>
+        <Node name="MS_SW_QA" type="T_REAL" access="ReadWrite">
+          <Comment> Sea Water Quality for filter DP.</Comment>
+        </Node>
+        <Node name="MS_TAU_TRC" type="T_REAL" access="ReadWrite">
+          <Comment> Time constant for TRC first order time</Comment>
+        </Node>
+        <Node name="MS_TAU_TRO" type="T_REAL" access="ReadWrite">
+          <Comment> Time constant for TRO first order time  </Comment>
+        </Node>
+        <Node name="MS_TE1111" type="T_REAL" access="ReadWrite" />
+        <Node name="SCENARIO1" type="T_BOOL" access="ReadWrite">
+          <Comment>SCENARIO</Comment>
+        </Node>
+        <Node name="SCENARIO10_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO10_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO2_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO2_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO3_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO3_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO4_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO4_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO5" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO6" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO7" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO8_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO8_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO9_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="SCENARIO9_2" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_UTILITY">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="AIT1121_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT1122_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT1123_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT151_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="AIT251_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117A_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="B117B_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA035_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA036_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA037_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="BA038_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAV_BAL_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAV_BAL_S" type="T_BOOL" access="ReadWrite">
+          <Comment> VAVLE LINE-UP FLAG</Comment>
+        </Node>
+        <Node name="BAV_DEBAL_P" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAV_DEBAL_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="BAV_STR_S" type="T_BOOL" access="ReadWrite" />
+        <Node name="CELL_VOLT" type="T_REAL" access="ReadWrite" />
+        <Node name="CT1111_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="DIAG_COMPLETE" type="T_BOOL" access="ReadWrite" />
+        <Node name="DIAG_ELAPSE_TIME" type="T_TIME" access="ReadWrite">
+          <Comment> SELF-DIAGNOSIS  ---------------- ADDED BY VER.1</Comment>
+        </Node>
+        <Node name="DP_P171" type="T_REAL" access="ReadWrite" />
+        <Node name="FCV1131_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV1211_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2131_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FCV2211_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT1131_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT1211_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT2131_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="FIT2211_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="H2_GAS" type="T_REAL" access="ReadWrite">
+          <Comment>SIMULATION</Comment>
+        </Node>
+        <Node name="INJECTION_TG_P" type="T_REAL" access="ReadWrite" />
+        <Node name="INJECTION_TG_S" type="T_REAL" access="ReadWrite" />
+        <Node name="LAT_DEG" type="T_UINT" access="ReadWrite">
+          <Comment>GPS</Comment>
+        </Node>
+        <Node name="LAT_DIR" type="T_STRING" access="ReadWrite" />
+        <Node name="LAT_MIN" type="T_REAL" access="ReadWrite" />
+        <Node name="LIT1311_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="LON_DEG" type="T_UINT" access="ReadWrite" />
+        <Node name="LON_DIR" type="T_STRING" access="ReadWrite" />
+        <Node name="LON_MIN" type="T_REAL" access="ReadWrite" />
+        <Node name="LOS_HART_BIT" type="T_INT" access="ReadWrite" />
+        <Node name="MS_FCV1131_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FCV1211_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FCV2131_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FCV2211_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_P132_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_P232_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RFA_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RFB_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RFC_SET" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_TRO_HOLD_P132" type="T_REAL" access="ReadWrite">
+          <Comment> NA PRE-SET TARTGET HOLDING TIME</Comment>
+        </Node>
+        <Node name="MS_TRO_HOLD_P232" type="T_REAL" access="ReadWrite">
+          <Comment> NA PRE-SET TARTGET HOLDING TIME</Comment>
+        </Node>
+        <Node name="NA_PRE_INIT_P132" type="T_REAL" access="ReadWrite">
+          <Comment> NA PRE-SET ---------- ADDED BY VER 1</Comment>
+        </Node>
+        <Node name="NA_PRE_INIT_P232" type="T_REAL" access="ReadWrite" />
+        <Node name="NA_PRE_MAX_P132" type="T_REAL" access="ReadWrite" />
+        <Node name="NA_PRE_MAX_P232" type="T_REAL" access="ReadWrite" />
+        <Node name="NA_PRE_MIN_P132" type="T_REAL" access="ReadWrite" />
+        <Node name="NA_PRE_MIN_P232" type="T_REAL" access="ReadWrite" />
+        <Node name="ON_IN_BAL" type="T_BOOL" access="ReadWrite" />
+        <Node name="ON_IN_DEBAL" type="T_BOOL" access="ReadWrite" />
+        <Node name="ON_IN_OP" type="T_BOOL" access="ReadWrite">
+          <Comment> OPERATION FLAG</Comment>
+        </Node>
+        <Node name="ON_IN_STR" type="T_BOOL" access="ReadWrite" />
+        <Node name="P132_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="P232_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT1121_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT1721_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="PT1722_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_BAL_SP_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_BAL_ST_M" type="T_BOOL" access="ReadWrite">
+          <Comment> REPORT FLAG</Comment>
+        </Node>
+        <Node name="REPORT_DEBAL_SP_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_DEBAL_ST_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFA_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFA_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFB_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFB_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFC_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_RFC_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_STRIP_SP" type="T_BOOL" access="ReadWrite" />
+        <Node name="REPORT_STRIP_ST" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142A_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142B_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF142C_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="RF_INTERLOCK" type="T_BOOL" access="ReadWrite" />
+        <Node name="RFA_CCSS" type="T_REAL" access="ReadWrite" />
+        <Node name="RFB_CCSS" type="T_REAL" access="ReadWrite" />
+        <Node name="RFC_CCSS" type="T_REAL" access="ReadWrite" />
+        <Node name="ROS_HART_BIT" type="T_INT" access="ReadWrite" />
+        <Node name="SD_BAL_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="SD_DEBAL_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="SD_RFA" type="T_BOOL" access="ReadWrite" />
+        <Node name="SD_RFB" type="T_BOOL" access="ReadWrite" />
+        <Node name="SD_RFC" type="T_BOOL" access="ReadWrite" />
+        <Node name="SD_STRIP" type="T_BOOL" access="ReadWrite" />
+        <Node name="SET_FCV1211_TRC" type="T_REAL" access="ReadWrite" />
+        <Node name="SET_FCV2211_TRC" type="T_REAL" access="ReadWrite" />
+        <Node name="SET_TOTAL_TRC" type="T_REAL" access="ReadWrite" />
+        <Node name="SW_TEMP" type="T_REAL" access="ReadWrite" />
+        <Node name="TE1111_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="TIME_DAY_RH_BAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_DAY_RH_DEBAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_DAY_RH_STRIP" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_HOUR_RH_BAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_HOUR_RH_DEBAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_HOUR_RH_STRIP" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_MIN_RH_BAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_MIN_RH_DEBAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_MIN_RH_STRIP" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_AIT1121" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_AIT1122" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_AIT1123" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_AIT151" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_AIT251" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_P171A" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_DAY_P171B" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_HOUR_EM_PARTIAL" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_HOUR_EM_TOTAL" type="T_UDINT" access="ReadWrite">
+          <Comment> RUNNING HOUR DISPLAY VARIABLE</Comment>
+        </Node>
+        <Node name="TIME_TOTAL_HOUR_P132" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_TOTAL_HOUR_P232" type="T_UDINT" access="ReadWrite" />
+        <Node name="TRO_NA_P" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_NA_S" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_PORT" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_RF_P" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_RF_S" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_STBD" type="T_REAL" access="ReadWrite" />
+        <Node name="TRO_STR" type="T_REAL" access="ReadWrite" />
+        <Node name="XV1171A_PASS" type="T_BOOL" access="ReadWrite" />
+        <Node name="XV1171B_PASS" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="PersistentVars">
+        <Comment>{attribute 'qualified_only'}</Comment>
+        <Node name="ControlRight" type="T_INT" access="ReadWrite">
+          <Comment>CONTROL RIGHT</Comment>
+        </Node>
+        <Node name="ControlRightFlagLOS" type="T_INT" access="ReadWrite" />
+        <Node name="ControlRightFlagROS" type="T_INT" access="ReadWrite" />
+        <Node name="MS_100D_A_HH" type="T_REAL" access="ReadWrite">
+          <Comment>RECTIFIER</Comment>
+        </Node>
+        <Node name="MS_100D_A_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_100D_V_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_100D_V_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1121_HH" type="T_REAL" access="ReadWrite">
+          <Comment> H2 GAS DETECTOR</Comment>
+        </Node>
+        <Node name="MS_AIT1121_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1122_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1122_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1123_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AIT1123_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AP_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_AP_LO" type="T_REAL" access="ReadWrite">
+          <Comment> AP TANK LEVEL</Comment>
+        </Node>
+        <Node name="MS_BLR_GAS" type="T_TIME" access="ReadWrite">
+          <Comment> BLOWER GAS OPERATING TIME</Comment>
+        </Node>
+        <Node name="MS_BLR_PRE" type="T_TIME" access="ReadWrite">
+          <Comment>//////////////////////////////////// System Parameter ///////////////////////////////////////</Comment>
+        </Node>
+        <Node name="MS_BLR_SP" type="T_TIME" access="ReadWrite">
+          <Comment> BLOWER SAFETY OPERATING TIME</Comment>
+        </Node>
+        <Node name="MS_BTRO_HH" type="T_REAL" access="ReadWrite">
+          <Comment> TRO</Comment>
+        </Node>
+        <Node name="MS_BTRO_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_BTRO_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_BTRO_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_CIT_NOR" type="T_REAL" access="ReadWrite">
+          <Comment> SALINITY RECOVERY TRIGGER VALUE</Comment>
+        </Node>
+        <Node name="MS_CT1111_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_CT1111_LO" type="T_REAL" access="ReadWrite">
+          <Comment> SEA WATER SALINITY</Comment>
+        </Node>
+        <Node name="MS_DIAG_TIME" type="T_TIME" access="ReadWrite">
+          <Comment>SELF-DIAGNOSIS</Comment>
+        </Node>
+        <Node name="MS_DP171_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_DP171_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_DTRO_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_DTRO_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_DTRO_STABLE" type="T_TIME" access="ReadWrite">
+          <Comment> TRO INITIAL STABLE TIME FOR DEBALLASTING</Comment>
+        </Node>
+        <Node name="MS_FCV1131_ASDB" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES OPEN&amp;CLOSE RECOGNITION SET VALUE     </Comment>
+        </Node>
+        <Node name="MS_FCV1131_CFDB" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES CONTROL FAILURE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV1131_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES INITIAL OPEN SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV1131_KD" type="T_REAL" access="ReadWrite">
+          <Comment> PID DERIVATIVE TIME</Comment>
+        </Node>
+        <Node name="MS_FCV1131_KI" type="T_REAL" access="ReadWrite">
+          <Comment> PID RESET TIME</Comment>
+        </Node>
+        <Node name="MS_FCV1131_KP" type="T_REAL" access="ReadWrite">
+          <Comment> PID PROPORTIONAL CONSTANT</Comment>
+        </Node>
+        <Node name="MS_FCV1131_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_FCV1131_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_FCV1211_ASDB" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES OPEN&amp;CLOSE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV1211_BAL" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES INITIAL OPEN SET VALUE FOR BALLASTING</Comment>
+        </Node>
+        <Node name="MS_FCV1211_BF" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES CLOSING SET VALUE ON BACK-FLUSHING </Comment>
+        </Node>
+        <Node name="MS_FCV1211_CFDB" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES CONTROL FAILURE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV1211_DB" type="T_REAL" access="ReadWrite">
+          <Comment> DEADBAND OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV1211_DEBAL" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES INITIAL OPEN SET VALUE FOR DE-BALLASTING</Comment>
+        </Node>
+        <Node name="MS_FCV1211_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_FCV1211_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_FCV1211_SAMPLE" type="T_TIME" access="ReadWrite">
+          <Comment> STEP INTERVAL TIME OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV1211_STEP" type="T_REAL" access="ReadWrite">
+          <Comment> STEP SIZE OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV1211_TRC" type="T_REAL" access="ReadWrite">
+          <Comment> TARGET TRC SET VALUE (S.V)</Comment>
+        </Node>
+        <Node name="MS_FCV2131_ASDB" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES OPEN&amp;CLOSE RECOGNITION SET VALUE     </Comment>
+        </Node>
+        <Node name="MS_FCV2131_CFDB" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES CONTROL FAILURE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV2131_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES INITIAL OPEN SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV2131_KD" type="T_REAL" access="ReadWrite">
+          <Comment> PID DERIVATIVE TIME</Comment>
+        </Node>
+        <Node name="MS_FCV2131_KI" type="T_REAL" access="ReadWrite">
+          <Comment> PID RESET TIME</Comment>
+        </Node>
+        <Node name="MS_FCV2131_KP" type="T_REAL" access="ReadWrite">
+          <Comment> PID PROPORTIONAL CONSTANT</Comment>
+        </Node>
+        <Node name="MS_FCV2131_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_FCV2131_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FCV VALVES LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_FCV2211_ASDB" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES OPEN&amp;CLOSE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV2211_BAL" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES INITIAL OPEN SET VALUE FOR BALLASTING</Comment>
+        </Node>
+        <Node name="MS_FCV2211_BF" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES CLOSING SET VALUE ON BACK-FLUSHING </Comment>
+        </Node>
+        <Node name="MS_FCV2211_CFDB" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES CONTROL FAILURE RECOGNITION SET VALUE</Comment>
+        </Node>
+        <Node name="MS_FCV2211_DB" type="T_REAL" access="ReadWrite">
+          <Comment> DEADBAND OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV2211_DEBAL" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES INITIAL OPEN SET VALUE FOR DE-BALLASTING</Comment>
+        </Node>
+        <Node name="MS_FCV2211_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_FCV2211_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> MAIN FCV VALVES LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_FCV2211_SAMPLE" type="T_TIME" access="ReadWrite">
+          <Comment> STEP INTERVAL TIME OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV2211_STEP" type="T_REAL" access="ReadWrite">
+          <Comment> STEP SIZE OF TRC CONTROL</Comment>
+        </Node>
+        <Node name="MS_FCV2211_TRC" type="T_REAL" access="ReadWrite">
+          <Comment> TARGET TRC SET VALUE (S.V)</Comment>
+        </Node>
+        <Node name="MS_FIT1131_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT1131_LO" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION FLOW RATE</Comment>
+        </Node>
+        <Node name="MS_FIT1211_HH" type="T_REAL" access="ReadWrite">
+          <Comment>//////////////////////////////////// Tags that registered as an Alarm ///////////////////////////////////////
+///////////////////////////////// Alarm Parameter ///////////////////////////////////////</Comment>
+        </Node>
+        <Node name="MS_FIT1211_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT1211_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2131_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2131_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2211_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2211_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_FIT2211_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_INJECTION_TG" type="T_REAL" access="ReadWrite">
+          <Comment> INJECTION VALVE</Comment>
+        </Node>
+        <Node name="MS_LIT1311_HI" type="T_REAL" access="ReadWrite">
+          <Comment> NU</Comment>
+        </Node>
+        <Node name="MS_LIT1311_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_LIT1311_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_MD_TEMP_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_MD_TEMP_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_NU_DB" type="T_REAL" access="ReadWrite">
+          <Comment> TRO DEADBAND FOR N.A CONTROL</Comment>
+        </Node>
+        <Node name="MS_NU_PRE" type="T_TIME" access="ReadWrite">
+          <Comment> N.A PUMP PRE-RUN TIME</Comment>
+        </Node>
+        <Node name="MS_NU_TRG" type="T_REAL" access="ReadWrite">
+          <Comment> TARGET TRO FOR N.A CONTROL</Comment>
+        </Node>
+        <Node name="MS_P132_DOWN" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP SET VALUE (DOWN)</Comment>
+        </Node>
+        <Node name="MS_P132_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P INITIAL SET VALUE</Comment>
+        </Node>
+        <Node name="MS_P132_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STROKE LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_P132_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STROKE LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_P132_SAMPLE" type="T_TIME" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP INTERVAL TIME OF N.A CONTROL</Comment>
+        </Node>
+        <Node name="MS_P132_UP" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP SET VALUE (UP)</Comment>
+        </Node>
+        <Node name="MS_P232_DOWN" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP SET VALUE (DOWN)	</Comment>
+        </Node>
+        <Node name="MS_P232_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P INITIAL SET VALUE</Comment>
+        </Node>
+        <Node name="MS_P232_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STROKE LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_P232_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STROKE LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_P232_SAMPLE" type="T_TIME" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP INTERVAL TIME OF N.A CONTROL</Comment>
+        </Node>
+        <Node name="MS_P232_UP" type="T_REAL" access="ReadWrite">
+          <Comment> NEUTRALIZATION P/P STEP SET VALUE (UP)</Comment>
+        </Node>
+        <Node name="MS_PT1121_HI" type="T_REAL" access="ReadWrite">
+          <Comment> BLOWER PRESSURE</Comment>
+        </Node>
+        <Node name="MS_PT1121_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1121_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1721_HI" type="T_REAL" access="ReadWrite">
+          <Comment> SEA WATER FEEDING UNIT</Comment>
+        </Node>
+        <Node name="MS_PT1721_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1721_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1722_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1722_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_PT1722_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RECIRCULATION_ST" type="T_TIME" access="ReadWrite">
+          <Comment> RECIRCULATION TIME DURING DE-BALLASTING START-UP</Comment>
+        </Node>
+        <Node name="MS_RF_CCSS_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER CCSS LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_RF_DB" type="T_REAL" access="ReadWrite">
+          <Comment> TRO DEADBAND FOR RECTIFIER CONTROL </Comment>
+        </Node>
+        <Node name="MS_RF_HOLD" type="T_TIME" access="ReadWrite">
+          <Comment> RECTIFIER INITIAL HOLDING TIME</Comment>
+        </Node>
+        <Node name="MS_RF_SAMPLE" type="T_TIME" access="ReadWrite">
+          <Comment> RECTIFIER STEP INTERVAL TIME</Comment>
+        </Node>
+        <Node name="MS_RF_TEMP_HH" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RF_TEMP_HI" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_RF_TRG" type="T_REAL" access="ReadWrite">
+          <Comment> TARGET TRO FOR RECTIFIER CONTROL</Comment>
+        </Node>
+        <Node name="MS_RFA_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INITIAL CURRENT SET VALUE</Comment>
+        </Node>
+        <Node name="MS_RFA_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_RFA_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_RFB_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INITIAL CURRENT SET VALUE	</Comment>
+        </Node>
+        <Node name="MS_RFB_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_RFB_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_RFC_INIT" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER INITIAL CURRENT SET VALUE	</Comment>
+        </Node>
+        <Node name="MS_RFC_MAX" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MAX)</Comment>
+        </Node>
+        <Node name="MS_RFC_MIN" type="T_REAL" access="ReadWrite">
+          <Comment> RECTIFIER LIMIT (MIN)</Comment>
+        </Node>
+        <Node name="MS_SWP_SP" type="T_TIME" access="ReadWrite">
+          <Comment> SWFP STOP WAITING TIME</Comment>
+        </Node>
+        <Node name="MS_SWP_ST" type="T_TIME" access="ReadWrite">
+          <Comment> SWFP START WAITING TIME</Comment>
+        </Node>
+        <Node name="MS_TE1111_HI" type="T_REAL" access="ReadWrite">
+          <Comment> SEA WATER TEMPERATURE	</Comment>
+        </Node>
+        <Node name="MS_TE1111_LL" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_TE1111_LO" type="T_REAL" access="ReadWrite" />
+        <Node name="MS_TE_NOR" type="T_REAL" access="ReadWrite">
+          <Comment> HEAT EXCHANGER VALVE CHANGE TRIGGER VALUE</Comment>
+        </Node>
+        <Node name="MS_TRO_SAMPLING" type="T_TIME" access="ReadWrite">
+          <Comment> TRO SAMPLING LINE FILLING TIME </Comment>
+        </Node>
+        <Node name="MS_TRO_STABLE" type="T_TIME" access="ReadWrite">
+          <Comment> TRO INITIAL STABLE TIME FOR BALLASTING</Comment>
+        </Node>
+        <Node name="MS_TRO_WAIT" type="T_TIME" access="ReadWrite">
+          <Comment> TRO START WAITING TIME</Comment>
+        </Node>
+        <Node name="MS_WBP_SP" type="T_TIME" access="ReadWrite">
+          <Comment>WAITING TIME FOR WBP</Comment>
+        </Node>
+        <Node name="MS_YARD_AL" type="T_TIME" access="ReadWrite">
+          <Comment> YARD ALARM DELAY TIME</Comment>
+        </Node>
+        <Node name="TD_100D_A_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_100D_A_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_100D_V_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_100D_V_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1121_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1121_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1122_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1122_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1123_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AIT1123_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AP_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_AP_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_BTRO_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_BTRO_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_BTRO_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_BTRO_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_CT1111_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_CT1111_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_DP171_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_DP171_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_DTRO_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_DTRO_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT1131_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT1131_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT1211_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT1211_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT1211_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT2131_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT2131_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT2211_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT2211_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_FIT2211_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_LIT1311_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_LIT1311_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_LIT1311_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_MD_TEMP_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_MD_TEMP_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1121_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1121_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1121_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1721_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1721_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1721_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1722_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1722_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_PT1722_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_RF_TEMP_HH" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_RF_TEMP_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_TE1111_HI" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_TE1111_LL" type="T_TIME" access="ReadWrite" />
+        <Node name="TD_TE1111_LO" type="T_TIME" access="ReadWrite" />
+        <Node name="TIME_RH_AIT1121" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_AIT1122" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_AIT1123" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_AIT151" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_AIT251" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_BAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_DEBAL_M" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_EM_PARTIAL" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_EM_TOTAL" type="T_UDINT" access="ReadWrite">
+          <Comment> RUNNING HOUR</Comment>
+        </Node>
+        <Node name="TIME_RH_P132" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_P171A" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_P171B" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_P232" type="T_UDINT" access="ReadWrite" />
+        <Node name="TIME_RH_STRIP" type="T_UDINT" access="ReadWrite" />
+      </Node>
+      <Node name="SEQ_BAL_SP_P">
+        <Node name="BST_S_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="TON_1" type="T_TON" access="ReadWrite">
+          <Comment> FLITER V/V CLOSING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment> SEA WATER REPLACEMENT TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite">
+          <Comment> BLOWER SAFETY STOP TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_BAL_SP_S">
+        <Node name="BST_P_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="TON_1" type="T_TON" access="ReadWrite">
+          <Comment> FLITER V/V CLOSING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment> SEA WATER REPLACEMENT TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite">
+          <Comment> BLOWER SAFETY STOP TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_BAL_ST_P">
+        <Node name="TON_1" type="T_TON" access="ReadWrite">
+          <Comment> BLOWER PRE RUNNING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment> SWFP RUNNING WAITING TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite">
+          <Comment> TRO RUNNING WAITING TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_BAL_ST_S">
+        <Node name="TON_1" type="T_TON" access="ReadWrite">
+          <Comment> BLOWER PRE RUNNING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment> SWFP RUNNING WAITING TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite">
+          <Comment> TRO RUNNING WAITING TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_DEBAL_SP_P">
+        <Node name="DST_S_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="TON_0" type="T_TON" access="ReadWrite" />
+      </Node>
+      <Node name="SEQ_DEBAL_SP_S">
+        <Node name="DST_P_ON" type="T_BOOL" access="ReadWrite" />
+        <Node name="TON_0" type="T_TON" access="ReadWrite" />
+      </Node>
+      <Node name="SEQ_DEBAL_ST_P">
+        <Node name="TON_0" type="T_TON" access="ReadWrite">
+          <Comment>N.A PUMP PRE RUNNING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment>TRO SENSOR WAITING TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite">
+          <Comment>RECIRCULATION TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_DEBAL_ST_S">
+        <Node name="TON_0" type="T_TON" access="ReadWrite">
+          <Comment>N.A PUMP PRE RUNNING TIME</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment>TRO SENSOR WAITING TIME</Comment>
+        </Node>
+        <Node name="TON_3" type="T_TON" access="ReadWrite" />
+      </Node>
+      <Node name="SEQ_STRIP_SP">
+        <Node name="TON_0" type="T_TON" access="ReadWrite">
+          <Comment>N.A PUMP PRE RUNNING TIME</Comment>
+        </Node>
+      </Node>
+      <Node name="SEQ_STRIP_ST">
+        <Node name="TON_0" type="T_TON" access="ReadWrite">
+          <Comment>N.A PUMP PRE RUNNING TIME</Comment>
+        </Node>
+        <Node name="TON_1" type="T_TON" access="ReadWrite">
+          <Comment>TRO Sampling pipe filling time</Comment>
+        </Node>
+        <Node name="TON_2" type="T_TON" access="ReadWrite">
+          <Comment>TRO SENSOR WAITING TIME</Comment>
+        </Node>
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
